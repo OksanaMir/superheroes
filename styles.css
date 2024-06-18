@@ -1,0 +1,254 @@
+/* General Styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #121212;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	margin: 0.5em 0;
+	color: #e0e0e0;
+}
+
+a {
+	color: #bb86fc;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+/* Header */
+header {
+	background-color: #1f1f1f;
+	color: white;
+	padding: 1em;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+	margin-bottom: 0.5em;
+}
+
+header nav {
+	display: flex;
+	justify-content: center;
+	gap: 1.5em;
+}
+
+header nav a {
+	padding: 0.5em;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+	background-color: #333;
+}
+/* Hero Section */
+.hero-section {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('../images/superhero-background.jpg') no-repeat center center /
+			cover;
+	padding: 6em 1em;
+	color: white;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-section h2 {
+	font-size: 3em;
+	margin-bottom: 0.5em;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+	font-size: 1.4em;
+	margin-bottom: 1em;
+}
+
+.hero-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.hero-section > * {
+	position: relative;
+	z-index: 2;
+}
+/* Superheroes List */
+.superheroes-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 2em;
+	padding: 2em 0;
+}
+
+.superhero-card {
+	background: #1f1f1f;
+	border: 1px solid #333;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	padding: 1em;
+	transition: transform 0.3s, box-shadow 0.3s;
+	overflow: hidden;
+	position: relative;
+}
+
+.superhero-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.superhero-card img {
+	margin-bottom: 1em;
+	transition: transform 0.3s;
+}
+
+.superhero-card:hover img {
+	transform: scale(1.05);
+}
+
+.superhero-card h3 {
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
+.superhero-card p {
+	margin-bottom: 1em;
+}
+
+.detail-link {
+	color: #bb86fc;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.detail-link:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+/* Footer */
+footer {
+	background-color: #1f1f1f;
+	color: white;
+	text-align: center;
+	padding: 1em 0;
+	position: relative;
+	width: 100%;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Buttons */
+button {
+	background-color: #bb86fc;
+	color: white;
+	border: none;
+	padding: 0.75em 1.5em;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+	background-color: #9c47fc;
+	transform: translateY(-2px);
+}
+
+button:active {
+	transform: translateY(0);
+}
+
+/* Inputs */
+input,
+textarea {
+	background-color: #2a2a2a;
+	color: #ffffff;
+	border: 1px solid #444;
+	padding: 0.75em;
+	border-radius: 4px;
+	width: 100%;
+	margin-bottom: 1em;
+}
+/* Media Queries */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+	.hero-section {
+		padding: 4em 1em;
+	}
+
+	.hero-section h2 {
+		font-size: 2.5em;
+	}
+
+	.superheroes-list {
+		gap: 1em;
+	}
+
+	.superhero-card {
+		max-width: 100%;
+	}
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+	header nav {
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	.hero-section {
+		padding: 3em 1em;
+	}
+
+	.hero-section h2 {
+		font-size: 2em;
+	}
+
+	.superheroes-list {
+		grid-template-columns: 1fr;
+		gap: 1em;
+	}
+
+	.superhero-card {
+		padding: 1em;
+	}
+}

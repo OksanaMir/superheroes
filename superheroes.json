@@ -1,0 +1,14 @@
+[
+	{
+		"id": 1,
+		"name": "Superhero 1",
+		"image": "superhero1.jpg",
+		"details": "Superhero 1 is known for amazing strength and agility."
+	},
+	{
+		"id": 2,
+		"name": "Superhero 2",
+		"image": "superhero2.jpg",
+		"details": "Superhero 2 has the power of flight and super speed."
+	}
+]
